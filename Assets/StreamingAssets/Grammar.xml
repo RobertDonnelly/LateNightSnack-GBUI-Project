@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<grammar version="1.0" xml:lang="en-US" 
+         root="commands" tag-format="semantics/1.0"
+         xmlns="http://www.w3.org/2001/06/grammar" >
+
+  <rule id="commands">
+    <one-of>
+      <item>
+        <ruleref uri ="#orderFood"/>
+      </item>
+    </one-of>
+  </rule>
+  
+  <rule id="orderFood">
+      <tag>out.order="order"</tag>
+      <one-of>
+        <item>Can i have</item>
+        <item>I would like</item>
+        <item>Give me </item>
+        <item>Make me</item>
+      </one-of>
+     <one-of>
+        <item>a</item>
+        <item>the</item>
+        <item>one</item>
+     </one-of>
+      <ruleref uri="#orderItem" />
+      <tag>out.order = rules.latest();</tag>
+    </rule>
+
+  <rule id="orderItem">
+      <one-of>
+        <item>chicken <tag>out = "chicken";</tag> </item>
+        <item>waffles <tag>out = "waffles";</tag> </item>
+        <item>milk <tag>out = "milk";</tag> </item>
+        <item>ice Cream <tag>out = "icecream";</tag></item>
+        <item>pizza <tag>out = "pizza";</tag> </item>
+        <item>chips <tag>out = "fries";</tag></item>
+        <item>fries <tag>out = "fries";</tag></item>
+        <item>soda<tag>out = "coke";</tag> </item>
+        <item>coke<tag>out = "coke";</tag> </item>
+        <item>Fizzy drink<tag>out = "coke";</tag> </item>
+      </one-of>
+    </rule>
+
+  
+  
+</grammar>
