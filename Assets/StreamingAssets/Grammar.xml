@@ -23,6 +23,7 @@
         <item>a</item>
         <item>the</item>
         <item>one</item>
+        <item>some</item>
      </one-of>
       <ruleref uri="#orderItem" />
       <tag>out.order = rules.latest();</tag>
@@ -42,7 +43,4 @@
         <item>Fizzy drink<tag>out = "coke";</tag> </item>
       </one-of>
     </rule>
-
-  
-  
 </grammar>

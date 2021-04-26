@@ -49,6 +49,8 @@ public class movementPlayer : MonoBehaviour
         Hunger = Hunger - HungerOT * Time.deltaTime;
         HungerSlider.value = Hunger / HungerMax;
 
+        // check if we have starved
+        //stios movement and activeates UI
         if (HungerSlider.value <= 0)
         {
             moneyUI.SetActive(false);
@@ -58,7 +60,7 @@ public class movementPlayer : MonoBehaviour
             starvationUI.SetActive(true);
             mainCam.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         }
-        else
+        else//if not move freely
         {
 
 

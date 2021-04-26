@@ -12,6 +12,7 @@ public class playerLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //locks cursor to middle
         Cursor.lockState = CursorLockMode.Locked;
     }
 

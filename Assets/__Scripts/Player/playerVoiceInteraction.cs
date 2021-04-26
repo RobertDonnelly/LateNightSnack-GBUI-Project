@@ -118,8 +118,7 @@ public class playerVoiceInteraction : MonoBehaviour
         }
         else
         {
-                        FindObjectOfType<AudioManager>().Play("deposit");
-
+            FindObjectOfType<AudioManager>().Play("deposit");
             Debug.Log("You don't have enough");
         }
         return script.gold;
